@@ -1,88 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CodeNeutronAI</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f5f5f5;
-      color: #333;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CodeNeutronAI offers AI-powered software solutions, including website and app creation, AI workflows, and personal chatbots.">
+    <meta name="keywords" content="AI, software, web development, app development, chatbots, AI workflows">
+    <title>CodeNeutronAI - AI-Powered Software Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "CodeNeutronAI",
+      "url": "https://www.codeneutronai.com",
+      "logo": "https://www.codeneutronai.com/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-XXX-XXX-XXXX",
+        "contactType": "customer service"
+      }
     }
-    header {
-      background-color: #1e1e1e;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    main {
-      max-width: 800px;
-      margin: auto;
-      padding: 30px;
-    }
-    h1 {
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-    .section {
-      margin-bottom: 40px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #1e1e1e;
-      color: #bbb;
-    }
-    a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+    </script>
 </head>
 <body>
 
-  <header>
-    <h1>CodeNeutronAI</h1>
-    <p>AI-Powered Software & Web Solutions</p>
-  </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">CodeNeutronAI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <main>
-    <div class="section">
-      <h2>About</h2>
-      <p>
-        We are a modern AI-first software agency providing custom solutions in web development, mobile apps, and automation.
-        Built for startups, schools, and smart businesses.
-      </p>
-    </div>
+    <header id="hero" class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4">Build the Future with <span id="typing-animation"></span></h1>
+            <p class="lead">We create intelligent websites, applications, and AI-powered solutions to elevate your business.</p>
+            <a href="#services" class="btn btn-primary btn-lg">Our Services</a>
+        </div>
+    </header>
 
-    <div class="section">
-      <h2>Services</h2>
-      <ul>
-        <li>💻 Website Development (HTML, Django, React)</li>
-        <li>📱 Mobile App Creation (Flutter)</li>
-        <li>🤖 AI Workflows (Chatbots, Automation, Insights)</li>
-        <li>📊 Data Dashboards & Visualization</li>
-      </ul>
-    </div>
+    <main class="container mt-5">
+        <section id="services" class="py-5">
+            <h2 class="text-center mb-4">Our Services</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4 fade-in">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Website Creation</h5>
+                            <p class="card-text">Modern, responsive websites built with the latest technologies to give you a competitive edge.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4 fade-in">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">App Creation</h5>
+                            <p class="card-text">Custom mobile applications for iOS and Android, designed to engage your users.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4 fade-in">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">AI Workflows</h5>
+                            <p class="card-text">Automate your business processes with intelligent AI-powered workflows and integrations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4 fade-in">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Personal Chatbots & AI Agents</h5>
+                            <p class="card-text">Engage your customers 24/7 with smart, conversational AI chatbots and virtual agents.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="section">
-      <h2>Contact</h2>
-      <p>
-        📧 Email: <a href="mailto:codeneutronai@gmail.com">codeneutronai@gmail.com</a><br>
-        💬 WhatsApp: <a href="https://wa.me/91XXXXXXXXXX" target="_blank">Message Us</a>
-      </p>
-    </div>
-  </main>
+        <section id="portfolio" class="py-5 bg-light rounded fade-in">
+            <h2 class="text-center mb-5">Our Featured Work</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <img src="https://via.placeholder.com/600x400" class="img-fluid rounded shadow" alt="Education Consulting App">
+                </div>
+                <div class="col-lg-5">
+                    <h3>Education Consulting App</h3>
+                    <p class="lead">A comprehensive platform for students to connect with educational consultants, streamlining the entire advisory process.</p>
+                    <a href="#" class="btn btn-outline-primary">View Project</a>
+                </div>
+            </div>
+        </section>
 
-  <footer>
-    &copy; 2025 CodeNeutronAI. All rights reserved.
-  </footer>
+        <section id="about" class="py-5 fade-in">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2>About Us</h2>
+                    <p class="lead">We are a passionate team of developers and AI specialists dedicated to building the next generation of software. We believe in the power of AI to transform businesses and create amazing user experiences.</p>
+                </div>
+            </div>
+        </section>
 
+        <section id="contact" class="py-5 fade-in">
+            <h2 class="text-center mb-4">Get in Touch</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <h4>Or contact us directly:</h4>
+                    <p class="lead">
+                        📧 Email: <a href="mailto:codeneutronai@gmail.com">codeneutronai@gmail.com</a><br>
+                        <br>
+                        💬 WhatsApp: <a href="https://wa.me/7737122404" target="_blank">Message Us</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 CodeNeutronAI. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script.js"></script>
 </body>
 </html>
