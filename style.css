@@ -3,6 +3,7 @@ body {
     background-color: #121212;
     color: #fff;
     cursor: none;
+    line-height: 1.6; /* Improve readability */
 }
 
 .cursor {
@@ -17,6 +18,23 @@ body {
     z-index: 9999;
 }
 
+/* General section styling */
+section {
+    padding: 80px 0; /* More generous padding for sections */
+    margin-bottom: 40px; /* Consistent spacing between sections */
+    background-color: #1a1a1a; /* Default dark background for sections */
+    border-radius: 8px; /* Consistent rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for sections */
+}
+
+/* Override for specific sections if needed */
+#hero {
+    padding: 0; /* Hero section handles its own height */
+    margin-bottom: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
 .hero-section {
     position: relative;
     height: 100vh;
@@ -25,6 +43,7 @@ body {
     justify-content: center;
     text-align: center;
     overflow: hidden;
+    background: linear-gradient(to bottom, #1a1a1a, #0a0a0a); /* Darker gradient for hero */
 }
 
 #particles-js {
@@ -47,16 +66,25 @@ body {
     opacity: 1;
 }
 
+/* Card styles */
 .card {
     background-color: #1e1e1e;
     border: 1px solid #333;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add box-shadow transition */
     color: #fff;
+    border-radius: 8px; /* Match section border-radius */
+    overflow: hidden; /* Ensure content respects border-radius */
 }
 
 .card:hover {
     transform: translateY(-10px);
     border-color: #6a11cb;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* More pronounced shadow on hover */
+}
+
+.card-title {
+    color: #6a11cb; /* Highlight card titles */
+    font-weight: bold;
 }
 
 .form-control {
@@ -69,9 +97,93 @@ body {
     background-color: #2c2c2c;
     color: #fff;
     border-color: #6a11cb;
-    box-shadow: none;
+    box-shadow: 0 0 0 0.25rem rgba(106, 17, 203, 0.25); /* Bootstrap-like focus shadow */
 }
 
+/* Ensure bg-light is consistent with new section backgrounds */
 .bg-light {
-    background-color: #1e1e1e !important;
+    background-color: #1a1a1a !important; /* Use the new standard section background */
+}
+
+/* New styles for header and logo blending */
+.navbar-dark.bg-dark {
+    background: linear-gradient(to right, #1a1a1a, #2a2a2a); /* Subtle gradient */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+}
+
+.navbar-brand img {
+    filter: brightness(1.1); /* Slightly brighten logo if it's dark */
+}
+
+/* Navigation link hover effect */
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.75); /* Default link color */
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fff; /* White on hover */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Subtle glow */
+}
+
+/* Video showcase section */
+#video-showcase {
+    background-color: #1a1a1a; /* Consistent with other sections */
+    padding: 80px 0; /* Consistent padding */
+    border-radius: 8px; /* Consistent rounded corners */
+    margin-bottom: 40px; /* Consistent spacing */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Consistent shadow */
+}
+
+#video-showcase h2 {
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+/* Typography refinements */
+h1, h2, h3, h4, h5, h6 {
+    color: #6a11cb; /* A consistent accent color for headings */
+    font-weight: 700; /* Make headings bolder */
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #6a11cb;
+    border-color: #6a11cb;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #5a0ea0;
+    border-color: #5a0ea0;
+    transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+    color: #6a11cb;
+    border-color: #6a11cb;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.btn-outline-primary:hover {
+    background-color: #6a11cb;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Footer styling */
+footer {
+    background-color: #0a0a0a !important; /* Darker footer */
+    padding: 30px 0;
+    margin-top: 60px; /* Space above footer */
 }
