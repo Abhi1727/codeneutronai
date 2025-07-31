@@ -22,7 +22,8 @@ document.addEventListener("DOMContentLoaded", function() {
         loop: true
     });
 
-    // Particle animation
+    // Particle animation (disabled for performance)
+    /*
     particlesJS("particles-js", {
         "particles": {
             "number": {
@@ -128,6 +129,7 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         "retina_detect": true
     });
+    */
 
     // Custom cursor
     const cursor = document.querySelector(".cursor");

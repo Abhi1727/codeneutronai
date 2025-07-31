@@ -43,7 +43,21 @@ section {
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    background: linear-gradient(to bottom, #1a1a1a, #0a0a0a); /* Darker gradient for hero */
+    background: linear-gradient(45deg, #1a1a1a, #2a2a2a, #1a1a1a, #2a2a2a);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 #particles-js {
@@ -186,4 +200,40 @@ footer {
     background-color: #0a0a0a !important; /* Darker footer */
     padding: 30px 0;
     margin-top: 60px; /* Space above footer */
+}
+
+.logo {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.brand-text {
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    animation: glow 2s infinite alternate;
+}
+
+.brand-c {
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff;
+}
+
+.brand-n {
+    color: #ff00ff;
+    text-shadow: 0 0 5px #ff00ff;
+}
+
+.brand-ai {
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #6a11cb, 0 0 10px #6a11cb;
+    }
+    to {
+        text-shadow: 0 0 10px #2575fc, 0 0 20px #2575fc;
+    }
 }
