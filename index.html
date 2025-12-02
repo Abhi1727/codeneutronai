@@ -21,7 +21,12 @@
     <link rel="stylesheet" href="style.css">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <meta name="theme-color" content="#6366f1">
     
     <script type="application/ld+json">
     {
@@ -59,7 +64,8 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="logo.png" alt="CodeNeutronAI" class="logo-img">
+                <img src="logo.png?v=3" alt="CodeNeutronAI" class="logo-img">
+                <span class="brand-text">CodeNeutronAI</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="toggler-icon"></span>
@@ -86,10 +92,6 @@
             <div class="row align-items-center min-vh-100">
                 <div class="col-lg-7">
                     <div class="hero-content" data-aos="fade-up">
-                        <div class="hero-badge">
-                            <span class="badge-icon">✨</span>
-                            <span>Introducing CodeNeutronAI</span>
-                        </div>
                         <h1 class="hero-title">
                             We are<br>
                             <span class="gradient-text">Your Partner in AI</span>
@@ -550,6 +552,24 @@
                                     <span>Mon – Fri · 10:00 AM – 7:00 PM IST</span>
                                 </div>
                             </div>
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="bi bi-building"></i>
+                                </div>
+                                <div class="info-content">
+                                    <span class="info-label">Main Office</span>
+                                    <span>Sector 63, Noida, Uttar Pradesh 201301, India</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="bi bi-geo-alt"></i>
+                                </div>
+                                <div class="info-content">
+                                    <span class="info-label">Head Office</span>
+                                    <span>Jodhpur, Rajasthan 342001, India</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="social-links">
                             <a href="https://youtube.com/@codeneutronai" target="_blank" class="social-link">
@@ -628,7 +648,10 @@
                 <div class="row g-4">
                     <div class="col-lg-4">
                         <div class="footer-brand">
-                            <img src="logo.png" alt="CodeNeutronAI" class="footer-logo">
+                            <div class="footer-logo-wrapper">
+                                <img src="logo.png?v=3" alt="CodeNeutronAI" class="footer-logo">
+                                <span class="footer-brand-text">CodeNeutronAI</span>
+                            </div>
                             <p>Your partner in AI-powered software solutions. We transform ideas into digital excellence.</p>
                             <div class="footer-social">
                                 <a href="https://youtube.com/@codeneutronai" target="_blank"><i class="bi bi-youtube"></i></a>
@@ -676,6 +699,17 @@
                                 <li>
                                     <i class="bi bi-clock"></i>
                                     <span>Mon – Fri · 10AM – 7PM</span>
+                                </li>
+                            </ul>
+                            <h4 class="mt-4">Our Offices</h4>
+                            <ul>
+                                <li>
+                                    <i class="bi bi-building"></i>
+                                    <span><strong>Main Office:</strong><br>Sector 63, Noida, UP 201301</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-geo-alt"></i>
+                                    <span><strong>Head Office:</strong><br>Jodhpur, Rajasthan 342001</span>
                                 </li>
                             </ul>
                         </div>

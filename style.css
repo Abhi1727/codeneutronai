@@ -263,22 +263,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-img {
-    height: 50px;
+    height: 45px;
     width: auto;
     transition: var(--transition);
-    filter: brightness(0) invert(1);
 }
 
 .navbar.scrolled .logo-img {
-    filter: brightness(0) invert(1);
+    height: 38px;
 }
 
 .brand-text {
     font-family: var(--font-display);
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    color: var(--white);
-    display: none;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-left: 10px;
 }
 
 .navbar-nav {
@@ -951,6 +953,9 @@ section {
     border-radius: 24px;
     overflow: hidden;
     transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .portfolio-card:hover {
@@ -962,6 +967,7 @@ section {
     position: relative;
     overflow: hidden;
     height: 280px;
+    flex-shrink: 0;
 }
 
 .portfolio-image img {
@@ -995,6 +1001,9 @@ section {
 
 .portfolio-info {
     padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .portfolio-category {
@@ -1018,6 +1027,7 @@ section {
     color: var(--text-muted);
     font-size: 0.95rem;
     margin-bottom: 20px;
+    flex: 1;
 }
 
 .portfolio-tech {
@@ -1332,13 +1342,15 @@ section {
     border: 1px solid var(--glass-border);
     border-radius: 12px;
     padding: 15px 20px;
-    color: var(--text-light);
+    color: var(--text-light) !important;
+    -webkit-text-fill-color: var(--text-light) !important;
     font-size: 1rem;
     transition: var(--transition);
 }
 
 .form-control::placeholder {
     color: var(--text-muted);
+    -webkit-text-fill-color: var(--text-muted);
 }
 
 .form-control:focus {
@@ -1346,6 +1358,19 @@ section {
     border-color: var(--primary);
     background: rgba(99, 102, 241, 0.05);
     box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+    color: var(--text-light) !important;
+    -webkit-text-fill-color: var(--text-light) !important;
+}
+
+/* Fix for browser autofill styles */
+.form-control:-webkit-autofill,
+.form-control:-webkit-autofill:hover,
+.form-control:-webkit-autofill:focus,
+.form-control:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px rgba(15, 15, 35, 1) inset !important;
+    -webkit-text-fill-color: var(--text-light) !important;
+    color: var(--text-light) !important;
+    caret-color: var(--text-light);
 }
 
 select.form-control {
@@ -1381,10 +1406,25 @@ textarea.form-control {
 }
 
 .footer-logo {
-    height: 60px;
+    height: 50px;
     width: auto;
-    margin-bottom: 15px;
-    filter: brightness(0) invert(1);
+}
+
+.footer-logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.footer-brand-text {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .footer-brand h3 {
