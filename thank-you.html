@@ -3,15 +3,318 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for contacting CodeNeutronAI. We'll get back to you soon!">
     <title>Thank You - CodeNeutronAI</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Styles -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <style>
+        .thank-you-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gradient-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .thank-you-section::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 40%);
+        }
+
+        .thank-you-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 600px;
+            padding: 40px;
+        }
+
+        .success-icon {
+            width: 120px;
+            height: 120px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 40px;
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+
+        .success-icon i {
+            font-size: 3.5rem;
+            color: var(--white);
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 0 30px rgba(99, 102, 241, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 60px rgba(99, 102, 241, 0.6);
+            }
+        }
+
+        .thank-you-content h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .thank-you-content p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .thank-you-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .thank-you-card h3 {
+            font-size: 1.2rem;
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+
+        .thank-you-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .thank-you-card li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 0;
+            color: var(--text-muted);
+        }
+
+        .thank-you-card li i {
+            color: var(--primary-light);
+            font-size: 1.2rem;
+        }
+
+        .social-connect {
+            margin-top: 40px;
+        }
+
+        .social-connect h4 {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-btn {
+            width: 55px;
+            height: 55px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 1.4rem;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .social-btn:hover {
+            background: var(--gradient-primary);
+            border-color: transparent;
+            color: var(--white);
+            transform: translateY(-5px);
+        }
+
+        .confetti {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+    </style>
 </head>
 <body>
-    <div class="container text-center mt-5">
-        <h1 class="display-4">Thank You!</h1>
-        <p class="lead">Your message has been sent successfully. We will get back to you as soon as possible.</p>
-        <a href="/" class="btn btn-primary">Go Back to Home</a>
-    </div>
+    <!-- Confetti Canvas -->
+    <canvas id="confetti" class="confetti"></canvas>
+
+    <section class="thank-you-section">
+        <div class="thank-you-content">
+            <div class="success-icon">
+                <i class="bi bi-check-lg"></i>
+            </div>
+            
+            <h1>Thank You! <span class="gradient-text">🎉</span></h1>
+            <p>Your message has been received successfully. We're excited to connect with you and will respond within 24 hours.</p>
+            
+            <div class="thank-you-card">
+                <h3>What happens next?</h3>
+                <ul>
+                    <li>
+                        <i class="bi bi-envelope-check"></i>
+                        <span>We'll review your message carefully</span>
+                    </li>
+                    <li>
+                        <i class="bi bi-clock-history"></i>
+                        <span>Expect a response within 24 hours</span>
+                    </li>
+                    <li>
+                        <i class="bi bi-chat-dots"></i>
+                        <span>We'll discuss your project in detail</span>
+                    </li>
+                    <li>
+                        <i class="bi bi-rocket-takeoff"></i>
+                        <span>Together, we'll bring your ideas to life!</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <a href="index.html" class="btn btn-primary btn-lg">
+                <span>Back to Home</span>
+                <i class="bi bi-arrow-right"></i>
+            </a>
+            
+            <div class="social-connect">
+                <h4>Connect with us in the meantime</h4>
+                <div class="social-buttons">
+                    <a href="https://youtube.com/@codeneutronai" target="_blank" class="social-btn" title="YouTube">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                    <a href="https://wa.me/7737122404" target="_blank" class="social-btn" title="WhatsApp">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                    <a href="mailto:codeneutronai@gmail.com" class="social-btn" title="Email">
+                        <i class="bi bi-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Confetti Animation
+        (function() {
+            const canvas = document.getElementById('confetti');
+            const ctx = canvas.getContext('2d');
+            
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            
+            const confettiCount = 150;
+            const confetti = [];
+            const colors = ['#6366f1', '#8b5cf6', '#0ea5e9', '#22c55e', '#f59e0b', '#ef4444'];
+            
+            for (let i = 0; i < confettiCount; i++) {
+                confetti.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height - canvas.height,
+                    r: Math.random() * 6 + 4,
+                    d: Math.random() * confettiCount,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    tilt: Math.random() * 10 - 5,
+                    tiltAngle: Math.random() * Math.PI,
+                    tiltAngleIncrement: Math.random() * 0.1 + 0.05
+                });
+            }
+            
+            function drawConfetti() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                confetti.forEach(function(c, i) {
+                    ctx.beginPath();
+                    ctx.lineWidth = c.r / 2;
+                    ctx.strokeStyle = c.color;
+                    ctx.moveTo(c.x + c.tilt + c.r / 4, c.y);
+                    ctx.lineTo(c.x + c.tilt, c.y + c.tilt + c.r / 4);
+                    ctx.stroke();
+                });
+                
+                updateConfetti();
+            }
+            
+            function updateConfetti() {
+                confetti.forEach(function(c, i) {
+                    c.tiltAngle += c.tiltAngleIncrement;
+                    c.y += (Math.cos(c.d) + 3 + c.r / 2) / 2;
+                    c.x += Math.sin(c.d);
+                    c.tilt = Math.sin(c.tiltAngle) * 15;
+                    
+                    if (c.y > canvas.height) {
+                        confetti[i] = {
+                            x: Math.random() * canvas.width,
+                            y: -10,
+                            r: c.r,
+                            d: c.d,
+                            color: c.color,
+                            tilt: c.tilt,
+                            tiltAngle: c.tiltAngle,
+                            tiltAngleIncrement: c.tiltAngleIncrement
+                        };
+                    }
+                });
+            }
+            
+            let animationFrames = 0;
+            const maxFrames = 300; // Stop after ~5 seconds
+            
+            function animate() {
+                drawConfetti();
+                animationFrames++;
+                
+                if (animationFrames < maxFrames) {
+                    requestAnimationFrame(animate);
+                } else {
+                    // Fade out
+                    canvas.style.transition = 'opacity 1s ease';
+                    canvas.style.opacity = '0';
+                }
+            }
+            
+            animate();
+            
+            window.addEventListener('resize', function() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+        })();
+    </script>
 </body>
 </html>
