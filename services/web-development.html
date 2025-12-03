@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional website development services by CodeNeutronAI. We build custom websites using React, Next.js, Vue.js, Angular, WordPress, and more. Get a modern, SEO-optimized, mobile-responsive website.">
+    <meta name="keywords" content="website development, web design, React development, Next.js, Vue.js, Angular, WordPress, custom website, responsive design, SEO optimization, e-commerce website, landing page, corporate website">
+    <title>Website Development Services - CodeNeutronAI</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="../style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <meta name="theme-color" content="#6366f1">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Website Development",
+        "provider": {
+            "@type": "Organization",
+            "name": "CodeNeutronAI"
+        },
+        "description": "Professional custom website development using modern frameworks like React, Next.js, Vue.js, and Angular",
+        "areaServed": "Worldwide"
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../logo.png?v=3" alt="CodeNeutronAI" class="logo-img">
+                <span class="brand-text">CodeNeutronAI</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="web-development.html">Website Development</a></li>
+                            <li><a class="dropdown-item" href="app-development.html">App Development</a></li>
+                            <li><a class="dropdown-item" href="ai-workflows.html">AI Workflows</a></li>
+                            <li><a class="dropdown-item" href="ai-chatbots.html">AI Chatbots & Agents</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#contact">Contact</a></li>
+                </ul>
+                <a href="../index.html#contact" class="btn btn-primary nav-cta ms-lg-3">Get Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="hero-gradient"></div>
+        <div class="container">
+            <div class="row align-items-center min-vh-75 py-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <span class="section-badge">WEBSITE DEVELOPMENT</span>
+                    <h1 class="display-4 fw-bold mb-4">
+                        Build Your Digital Presence with <span class="gradient-text">Modern Websites</span>
+                    </h1>
+                    <p class="lead mb-4">
+                        We craft stunning, high-performance websites that drive results. From simple landing pages to complex web applications, we bring your vision to life using the latest technologies.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="../index.html#contact" class="btn btn-primary btn-lg">
+                            <span>Get Free Quote</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                        <a href="#technologies" class="btn btn-outline-light btn-lg">
+                            <span>View Technologies</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="service-hero-visual">
+                        <div class="code-window">
+                            <div class="code-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <span class="file-name">App.jsx</span>
+                            </div>
+                            <pre class="code-content"><code><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;
+
+<span class="keyword">const</span> <span class="function">App</span> = () => {
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;div</span> <span class="attr">className</span>=<span class="string">"app"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;h1&gt;</span>Welcome to Your Website<span class="tag">&lt;/h1&gt;</span>
+      <span class="tag">&lt;p&gt;</span>Built with ❤️ by CodeNeutronAI<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  );
+};
+
+<span class="keyword">export default</span> App;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Build Section -->
+    <section class="py-5 bg-dark-light">
+        <div class="container py-5">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="section-badge">WHAT WE BUILD</span>
+                <h2 class="section-title">Types of Websites <span class="gradient-text">We Create</span></h2>
+                <p class="section-subtitle">From simple to complex, we handle projects of all scales</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">
+                            <i class="bi bi-building"></i>
+                        </div>
+                        <h3>Corporate Websites</h3>
+                        <p>Professional business websites that establish credibility and showcase your brand. Perfect for companies looking to build their online presence.</p>
+                        <ul class="feature-list">
+                            <li>Company profile pages</li>
+                            <li>Team & leadership sections</li>
+                            <li>Service/Product showcases</li>
+                            <li>Contact & inquiry forms</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">
+                            <i class="bi bi-cart4"></i>
+                        </div>
+                        <h3>E-Commerce Stores</h3>
+                        <p>Full-featured online stores with secure payment processing, inventory management, and seamless shopping experiences.</p>
+                        <ul class="feature-list">
+                            <li>Product catalogs & categories</li>
+                            <li>Shopping cart & checkout</li>
+                            <li>Payment gateway integration</li>
+                            <li>Order tracking & management</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">
+                            <i class="bi bi-window-sidebar"></i>
+                        </div>
+                        <h3>Landing Pages</h3>
+                        <p>High-converting landing pages designed to capture leads and drive conversions for your marketing campaigns.</p>
+                        <ul class="feature-list">
+                            <li>A/B testing ready</li>
+                            <li>Lead capture forms</li>
+                            <li>Analytics integration</li>
+                            <li>Fast loading speed</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">
+                            <i class="bi bi-gear-wide-connected"></i>
+                        </div>
+                        <h3>Web Applications</h3>
+                        <p>Custom web applications with complex functionality, user authentication, databases, and real-time features.</p>
+                        <ul class="feature-list">
+                            <li>User authentication & roles</li>
+                            <li>Dashboard & admin panels</li>
+                            <li>API integrations</li>
+                            <li>Real-time data updates</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">
+                            <i class="bi bi-person-workspace"></i>
+                        </div>
+                        <h3>Portfolio Websites</h3>
+                        <p>Stunning portfolio sites for creatives, freelancers, and professionals to showcase their work and attract clients.</p>
+                        <ul class="feature-list">
+                            <li>Project galleries</li>
+                            <li>Case study layouts</li>
+                            <li>Testimonials section</li>
+                            <li>Blog integration</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">
+                            <i class="bi bi-newspaper"></i>
+                        </div>
+                        <h3>Blogs & Content Sites</h3>
+                        <p>Content management systems and blogs optimized for SEO and reader engagement.</p>
+                        <ul class="feature-list">
+                            <li>CMS integration</li>
+                            <li>SEO optimization</li>
+                            <li>Social sharing</li>
+                            <li>Newsletter integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="py-5">
+        <div class="container py-5">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="section-badge">TECHNOLOGIES</span>
+                <h2 class="section-title">Frameworks & Tools <span class="gradient-text">We Master</span></h2>
+                <p class="section-subtitle">We use the best tools for each unique project</p>
+            </div>
+            
+            <!-- Frontend Frameworks -->
+            <div class="tech-category mb-5" data-aos="fade-up">
+                <h3 class="tech-category-title"><i class="bi bi-code-slash"></i> Frontend Frameworks</h3>
+                <div class="row g-3">
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <div class="tech-icon-large">⚛️</div>
+                            <h4>React.js</h4>
+                            <p>Component-based UI</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <div class="tech-icon-large">▲</div>
+                            <h4>Next.js</h4>
+                            <p>Full-stack React</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <div class="tech-icon-large">💚</div>
+                            <h4>Vue.js</h4>
+                            <p>Progressive framework</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <div class="tech-icon-large">🅰️</div>
+                            <h4>Angular</h4>
+                            <p>Enterprise apps</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <div class="tech-icon-large">⚡</div>
+                            <h4>Svelte</h4>
+                            <p>Compile-time magic</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <div class="tech-icon-large">🎨</div>
+                            <h4>Tailwind CSS</h4>
+                            <p>Utility-first CSS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend Technologies -->
+            <div class="tech-category mb-5" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="tech-category-title"><i class="bi bi-server"></i> Backend Technologies</h3>
+                <div class="row g-3">
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <div class="tech-icon-large">🟢</div>
+                            <h4>Node.js</h4>
+                            <p>JavaScript runtime</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <div class="tech-icon-large">🐍</div>
+                            <h4>Python</h4>
+                            <p>Django / FastAPI</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <div class="tech-icon-large">🐘</div>
+                            <h4>PHP</h4>
+                            <p>Laravel / WordPress</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <div class="tech-icon-large">🔷</div>
+                            <h4>TypeScript</h4>
+                            <p>Type-safe JS</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <div class="tech-icon-large">🚂</div>
+                            <h4>Express.js</h4>
+                            <p>Node framework</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <div class="tech-icon-large">🔥</div>
+                            <h4>NestJS</h4>
+                            <p>Enterprise Node</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Databases -->
+            <div class="tech-category mb-5" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="tech-category-title"><i class="bi bi-database"></i> Databases</h3>
+                <div class="row g-3">
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <div class="tech-icon-large">🍃</div>
+                            <h4>MongoDB</h4>
+                            <p>NoSQL database</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <div class="tech-icon-large">🐬</div>
+                            <h4>MySQL</h4>
+                            <p>Relational DB</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <div class="tech-icon-large">🐘</div>
+                            <h4>PostgreSQL</h4>
+                            <p>Advanced SQL</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <div class="tech-icon-large">🔥</div>
+                            <h4>Firebase</h4>
+                            <p>Real-time DB</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <div class="tech-icon-large">⚡</div>
+                            <h4>Redis</h4>
+                            <p>In-memory cache</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <div class="tech-icon-large">🌐</div>
+                            <h4>Supabase</h4>
+                            <p>Open source Firebase</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CMS & E-commerce -->
+            <div class="tech-category" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="tech-category-title"><i class="bi bi-layout-text-window"></i> CMS & E-Commerce</h3>
+                <div class="row g-3">
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <div class="tech-icon-large">📝</div>
+                            <h4>WordPress</h4>
+                            <p>Popular CMS</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <div class="tech-icon-large">🛒</div>
+                            <h4>Shopify</h4>
+                            <p>E-commerce</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <div class="tech-icon-large">🛍️</div>
+                            <h4>WooCommerce</h4>
+                            <p>WP E-commerce</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <div class="tech-icon-large">📄</div>
+                            <h4>Strapi</h4>
+                            <p>Headless CMS</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <div class="tech-icon-large">🧱</div>
+                            <h4>Sanity</h4>
+                            <p>Content platform</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <div class="tech-icon-large">🎯</div>
+                            <h4>Webflow</h4>
+                            <p>Visual builder</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5 bg-dark-light">
+        <div class="container py-5">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="section-badge">WHY CHOOSE US</span>
+                <h2 class="section-title">What Makes Our Websites <span class="gradient-text">Stand Out</span></h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="bi bi-speedometer2"></i>
+                        </div>
+                        <h3>Lightning Fast</h3>
+                        <p>We optimize every aspect for speed. Our websites load in under 2 seconds, improving user experience and SEO rankings.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="bi bi-phone"></i>
+                        </div>
+                        <h3>Mobile-First Design</h3>
+                        <p>With 60%+ traffic coming from mobile, we design for mobile first, ensuring perfect experience on all devices.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="bi bi-search"></i>
+                        </div>
+                        <h3>SEO Optimized</h3>
+                        <p>Every website is built with SEO best practices - proper meta tags, structured data, fast loading, and clean URLs.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h3>Secure & Reliable</h3>
+                        <p>SSL certificates, secure authentication, regular backups, and protection against common vulnerabilities.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="bi bi-arrows-fullscreen"></i>
+                        </div>
+                        <h3>Scalable Architecture</h3>
+                        <p>Built to grow with your business. Our architecture handles increasing traffic and features without breaking.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="bi bi-tools"></i>
+                        </div>
+                        <h3>Easy to Maintain</h3>
+                        <p>Clean, documented code and admin panels that let you update content without technical knowledge.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="section-badge">PRICING</span>
+                <h2 class="section-title">Transparent <span class="gradient-text">Pricing</span></h2>
+                <p class="section-subtitle">Packages tailored to your needs and budget</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Starter</h3>
+                            <p class="pricing-description">Perfect for small businesses</p>
+                            <div class="pricing-price">
+                                <span class="currency">₹</span>
+                                <span class="amount">15,000</span>
+                                <span class="period">onwards</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="bi bi-check-circle-fill"></i> 5-7 Pages Website</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Mobile Responsive</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Contact Form</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Basic SEO Setup</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Social Media Integration</li>
+                            <li><i class="bi bi-check-circle-fill"></i> 1 Month Free Support</li>
+                        </ul>
+                        <a href="../index.html#contact" class="btn btn-outline-primary w-100">Get Started</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-card featured">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="pricing-header">
+                            <h3>Professional</h3>
+                            <p class="pricing-description">For growing businesses</p>
+                            <div class="pricing-price">
+                                <span class="currency">₹</span>
+                                <span class="amount">35,000</span>
+                                <span class="period">onwards</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="bi bi-check-circle-fill"></i> 10-15 Pages Website</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Custom Design</li>
+                            <li><i class="bi bi-check-circle-fill"></i> CMS Integration</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Advanced SEO</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Analytics Setup</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Blog Section</li>
+                            <li><i class="bi bi-check-circle-fill"></i> 3 Months Free Support</li>
+                        </ul>
+                        <a href="../index.html#contact" class="btn btn-primary w-100">Get Started</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Enterprise</h3>
+                            <p class="pricing-description">Custom web applications</p>
+                            <div class="pricing-price">
+                                <span class="currency">₹</span>
+                                <span class="amount">75,000</span>
+                                <span class="period">onwards</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="bi bi-check-circle-fill"></i> Unlimited Pages</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Custom Web Application</li>
+                            <li><i class="bi bi-check-circle-fill"></i> User Authentication</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Database Integration</li>
+                            <li><i class="bi bi-check-circle-fill"></i> API Development</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Admin Dashboard</li>
+                            <li><i class="bi bi-check-circle-fill"></i> 6 Months Free Support</li>
+                        </ul>
+                        <a href="../index.html#contact" class="btn btn-outline-primary w-100">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-muted mt-4">* Prices may vary based on specific requirements. Contact us for a detailed quote.</p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-wrapper" data-aos="zoom-in">
+                <div class="cta-content text-center">
+                    <h2>Ready to Build Your <span class="gradient-text">Dream Website?</span></h2>
+                    <p>Let's discuss your project and bring your vision to life. Get a free consultation today.</p>
+                    <div class="d-flex gap-3 justify-content-center flex-wrap">
+                        <a href="../index.html#contact" class="btn btn-light btn-lg">
+                            <span>Get Free Quote</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                        <a href="https://wa.me/7737122404" target="_blank" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-whatsapp"></i>
+                            <span>WhatsApp Us</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom py-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2025 CodeNeutronAI. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="../index.html" class="text-muted me-3">Home</a>
+                        <a href="../index.html#contact" class="text-muted">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out',
+            once: true
+        });
+    </script>
+</body>
+</html>
