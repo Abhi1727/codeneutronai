@@ -13,7 +13,211 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScroll();
     initBackToTop();
     initFormValidation();
+    initServicesSlider();
 });
+
+/* Services Slider - True Infinite Circular Carousel */
+function initServicesSlider() {
+    const slider = document.getElementById('servicesSlider');
+    const track = slider?.querySelector('.services-track');
+    const originalSlides = slider?.querySelectorAll('.service-slide');
+    const prevBtn = document.getElementById('servicesPrev');
+    const nextBtn = document.getElementById('servicesNext');
+    const dotsContainer = document.getElementById('sliderDots');
+    
+    if (!slider || !track || !originalSlides.length) return;
+    
+    const totalOriginal = originalSlides.length; // 6 original slides
+    let currentIndex = totalOriginal; // Start at first real slide (after clones)
+    let isTransitioning = false;
+    
+    // Clone slides for infinite loop - clone all slides to both ends
+    function setupInfiniteSlider() {
+        // Clone all slides and append to end
+        originalSlides.forEach(slide => {
+            const clone = slide.cloneNode(true);
+            clone.classList.add('clone');
+            track.appendChild(clone);
+        });
+        
+        // Clone all slides and prepend to beginning
+        [...originalSlides].reverse().forEach(slide => {
+            const clone = slide.cloneNode(true);
+            clone.classList.add('clone');
+            track.insertBefore(clone, track.firstChild);
+        });
+    }
+    
+    // Get all slides after cloning
+    function getAllSlides() {
+        return track.querySelectorAll('.service-slide');
+    }
+    
+    // Create dots for original 6 slides only
+    function createDots() {
+        dotsContainer.innerHTML = '';
+        for (let i = 0; i < totalOriginal; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('slider-dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(i + totalOriginal));
+            dotsContainer.appendChild(dot);
+        }
+    }
+    
+    // Update dots based on current position
+    function updateDots() {
+        const realIndex = getRealIndex();
+        const dots = dotsContainer.querySelectorAll('.slider-dot');
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === realIndex);
+        });
+    }
+    
+    // Get the real index (0-5) from current position
+    function getRealIndex() {
+        return ((currentIndex - totalOriginal) % totalOriginal + totalOriginal) % totalOriginal;
+    }
+    
+    // Calculate slide width
+    function getSlideWidth() {
+        const slides = getAllSlides();
+        return slides[0].offsetWidth + 24; // width + gap
+    }
+    
+    // Update slider position
+    function updateSlider(animate = true) {
+        const slideWidth = getSlideWidth();
+        
+        if (!animate) {
+            track.style.transition = 'none';
+        } else {
+            track.style.transition = 'transform 0.5s ease';
+        }
+        
+        track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        updateDots();
+    }
+    
+    // Handle infinite loop jump
+    function handleTransitionEnd() {
+        const slides = getAllSlides();
+        const totalSlides = slides.length; // 18 slides (6 clones + 6 original + 6 clones)
+        
+        isTransitioning = false;
+        
+        // If at the end clones, jump to real slides
+        if (currentIndex >= totalOriginal * 2) {
+            currentIndex = currentIndex - totalOriginal;
+            updateSlider(false);
+        }
+        
+        // If at the beginning clones, jump to real slides
+        if (currentIndex < totalOriginal) {
+            currentIndex = currentIndex + totalOriginal;
+            updateSlider(false);
+        }
+        
+        // Re-enable transition after instant jump
+        setTimeout(() => {
+            track.style.transition = 'transform 0.5s ease';
+        }, 20);
+    }
+    
+    // Go to specific slide
+    function goToSlide(index) {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        currentIndex = index;
+        updateSlider();
+    }
+    
+    // Next slide
+    function nextSlide() {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        currentIndex++;
+        updateSlider();
+    }
+    
+    // Previous slide
+    function prevSlide() {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        currentIndex--;
+        updateSlider();
+    }
+    
+    // Setup infinite slider
+    setupInfiniteSlider();
+    
+    // Event listeners
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+    
+    track.addEventListener('transitionend', handleTransitionEnd);
+    
+    // Handle resize
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            updateSlider(false);
+            setTimeout(() => {
+                track.style.transition = 'transform 0.5s ease';
+            }, 50);
+        }, 100);
+    });
+    
+    // Touch/swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    slider.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    
+    slider.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, { passive: true });
+    
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+        
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+                nextSlide();
+            } else {
+                prevSlide();
+            }
+        }
+    }
+    
+    // Auto-slide every 4 seconds
+    let autoSlide = setInterval(nextSlide, 4000);
+    
+    // Pause auto-slide on hover
+    slider.addEventListener('mouseenter', () => {
+        clearInterval(autoSlide);
+    });
+    
+    slider.addEventListener('mouseleave', () => {
+        autoSlide = setInterval(nextSlide, 4000);
+    });
+    
+    // Initialize
+    createDots();
+    
+    // Initial position (start at first real slide, after clones)
+    setTimeout(() => {
+        updateSlider(false);
+        setTimeout(() => {
+            track.style.transition = 'transform 0.5s ease';
+        }, 50);
+    }, 100);
+}
 
 /* Preloader */
 function initPreloader() {
@@ -560,4 +764,4 @@ function initFormValidation() {
 /* Console Message */
 console.log('%c🚀 CodeNeutronAI', 'font-size: 24px; font-weight: bold; color: #6366f1;');
 console.log('%cBuilding the Future with AI', 'font-size: 14px; color: #8b5cf6;');
-console.log('%cInterested in working with us? Contact us at codeneutronai@gmail.com', 'font-size: 12px; color: #9ca3af;');
+console.log('%cInterested in working with us? Contact us at info@codeneutronai.com', 'font-size: 12px; color: #9ca3af;');

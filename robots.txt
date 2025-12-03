@@ -1,0 +1,26 @@
+# robots.txt for CodeNeutronAI
+# https://codeneutronai.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://codeneutronai.com/sitemap.xml
+
+# Disallow sensitive paths
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /deploy.sh
+
+# Crawl delay (optional, be gentle)
+Crawl-delay: 1
+
+# Google-specific
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing-specific
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
